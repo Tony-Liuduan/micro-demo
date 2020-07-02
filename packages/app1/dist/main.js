@@ -496,8 +496,8 @@ eval("module.exports = app2;\n\n//# sourceURL=webpack://app1/external_%22app2%22
 /******/ 			var promises = [];
 /******/ 			switch(name) {
 /******/ 				case "default": {
-/******/ 					register("react-dom", [16,13,1], () => () => __webpack_require__(/*! ./node_modules/react-dom/index.js */ "./node_modules/react-dom/index.js"));
 /******/ 					register("react", [16,13,1], () => () => __webpack_require__(/*! ./node_modules/react/index.js */ "./node_modules/react/index.js"));
+/******/ 					register("react-dom", [16,13,1], () => () => __webpack_require__(/*! ./node_modules/react-dom/index.js */ "./node_modules/react-dom/index.js"));
 /******/ 					initExternal("webpack/container/reference/app2");
 /******/ 				}
 /******/ 				break;
@@ -605,8 +605,8 @@ eval("module.exports = app2;\n\n//# sourceURL=webpack://app1/external_%22app2%22
 /******/ 		};
 /******/ 		var installedModules = {};
 /******/ 		var moduleToHandlerMapping = {
-/******/ 			"webpack/sharing/consume/default/react/react": () => loadSingletonVersionCheckFallback("default", "react", ["16",13,1], () => () => __webpack_require__(/*! react */ "./node_modules/react/index.js")),
-/******/ 			"webpack/sharing/consume/default/react-dom/react-dom": () => loadSingletonVersionCheckFallback("default", "react-dom", ["16",13,1], () => () => __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"))
+/******/ 			"webpack/sharing/consume/default/react/react": () => loadStrictVersionCheckFallback("default", "react", ["16",13,1], () => () => __webpack_require__(/*! react */ "./node_modules/react/index.js")),
+/******/ 			"webpack/sharing/consume/default/react-dom/react-dom": () => loadStrictVersionCheckFallback("default", "react-dom", ["16",13,1], () => () => __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"))
 /******/ 		};
 /******/ 		var initialConsumes = ["webpack/sharing/consume/default/react/react","webpack/sharing/consume/default/react-dom/react-dom"];
 /******/ 		initialConsumes.forEach((id) => {

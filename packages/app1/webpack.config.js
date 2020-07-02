@@ -2,14 +2,14 @@
  * @fileoverview 
  * @author liuduan
  * @Date 2020-07-02 11:25:32
- * @LastEditTime 2020-07-02 14:27:55
+ * @LastEditTime 2020-07-02 14:56:31
  */
 const ModuleFederationPlugin = require('webpack').container.ModuleFederationPlugin;
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    target: 'web',
     mode: 'development',
     module: {
         rules: [
@@ -33,6 +33,7 @@ module.exports = {
     //     'react-dom': 'ReactDOM',
     // },
     plugins: [
+        new CleanWebpackPlugin(),
         new ModuleFederationPlugin({
             name: 'app1',
             library: { type: 'var', name: 'app1' },
@@ -40,11 +41,11 @@ module.exports = {
             shared: /* ['react', 'react-dom'] ||  */{
                 'react': {
                     eager: true,
-                    singleton: true,
+                    // singleton: true,
                 },
                 'react-dom': {
                     eager: true,
-                    singleton: true,
+                    // singleton: true,
                 },
             },
         }),

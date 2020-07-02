@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client:init": "lerna init"
+    "client:init": "lerna init",
+    "build": "lerna run --parallel build",
+    "serve": "lerna run --parallel serve"
   },
   "repository": {
     "type": "git",
