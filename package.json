@@ -1,0 +1,23 @@
+{
+  "name": "micro-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client:init": "lerna init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tony-Liuduan/micro-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tony-Liuduan/micro-demo/issues"
+  },
+  "homepage": "https://github.com/Tony-Liuduan/micro-demo#readme",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
