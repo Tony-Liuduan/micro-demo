@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "client:init": "lerna init",
+    "dev": "lerna run --parallel start",
     "build": "lerna run --parallel build",
     "serve": "lerna run --parallel serve"
   },
