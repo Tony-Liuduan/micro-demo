@@ -194,7 +194,7 @@ eval("module.exports = app2;\n\n//# sourceURL=webpack://app1/external_%22app2%22
 /******/ 	(() => {
 /******/ 		var installedModules = {};
 /******/ 		var chunkMapping = {
-/******/ 			"webpack_container_remote_app2_Button": [
+/******/ 			"src_bootstrap_js": [
 /******/ 				"webpack/container/remote/app2/Button"
 /******/ 			]
 /******/ 		};
@@ -299,8 +299,8 @@ eval("module.exports = app2;\n\n//# sourceURL=webpack://app1/external_%22app2%22
 /******/ 			var promises = [];
 /******/ 			switch(name) {
 /******/ 				case "default": {
-/******/ 					register("react-dom", [16,13,1], () => Promise.all([__webpack_require__.e("vendors-node_modules_react-dom_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react")]).then(() => () => __webpack_require__(/*! ./node_modules/react-dom/index.js */ "./node_modules/react-dom/index.js")));
 /******/ 					register("react", [16,13,1], () => __webpack_require__.e("vendors-node_modules_react_index_js").then(() => () => __webpack_require__(/*! ./node_modules/react/index.js */ "./node_modules/react/index.js")));
+/******/ 					register("react-dom", [16,13,1], () => Promise.all([__webpack_require__.e("vendors-node_modules_react-dom_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react")]).then(() => () => __webpack_require__(/*! ./node_modules/react-dom/index.js */ "./node_modules/react-dom/index.js")));
 /******/ 					initExternal("webpack/container/reference/app2");
 /******/ 				}
 /******/ 				break;
@@ -468,7 +468,7 @@ eval("module.exports = app2;\n\n//# sourceURL=webpack://app1/external_%22app2%22
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(/^(vendors\-node_modules_react(|\-dom)_index_js|src_bootstrap_js)$/.test(chunkId)) {
+/******/ 						if("webpack_sharing_consume_default_react_react" != chunkId) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => {
 /******/ 								installedChunkData = installedChunks[chunkId] = [resolve, reject];
