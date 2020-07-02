@@ -5,11 +5,11 @@ import LocalCounter from './Counter.js';
 
 const App = () => (
   <div>
-    <h3>基础的Remote的微前端应用</h3>
-    <h2>🏡components-app2</h2>
-    <hr />
+    <h1>Basic Host-Remote</h1>
+    <h2>App 2</h2>
     <LocalButton />
     <LocalCounter />
   </div>
 );
+
 export default App;

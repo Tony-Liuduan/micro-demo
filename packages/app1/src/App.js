@@ -3,13 +3,15 @@ const { lazy, Suspense } = React;
 
 const RemoteButton = lazy(() => import('app2/Button'));
 
+
 const App = () => (
   <div>
-    <h3>基础的Remote的微前端应用</h3>
-    <hr />
-    <Suspense fallback="loading......">
+    <h1>Basic Host-Remote</h1>
+    <h2>App 1</h2>
+    <Suspense fallback="Loading Button">
       <RemoteButton />
     </Suspense>
   </div>
 );
+
 export default App;
