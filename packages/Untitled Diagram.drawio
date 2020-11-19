@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-19T12:23:11.056Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="b2SWUgMaQcgIac1dSoXP" version="13.10.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-19T12:25:33.380Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="wmWNHE6VidUCCcmkVPLd" version="13.10.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="1380" dy="934" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
       <root>
@@ -130,21 +130,6 @@
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-52" value="&lt;span style=&quot;font-size: 18px&quot;&gt;生产构建&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
           <mxGeometry x="1022" y="513" width="82" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="BLUn2VgbFZo_RPLo1cwa-53" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1164" y="1030" as="sourcePoint" />
-            <mxPoint x="1164" y="498" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="BLUn2VgbFZo_RPLo1cwa-54" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1372" y="1028" as="sourcePoint" />
-            <mxPoint x="1372" y="496" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="BLUn2VgbFZo_RPLo1cwa-55" value="&lt;span style=&quot;font-size: 18px&quot;&gt;上传路由依赖&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="1208" y="513" width="118" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-61" value="&lt;font style=&quot;font-size: 16px&quot;&gt;build&lt;/font&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
           <mxGeometry x="1002" y="692" width="100" height="38" as="geometry" />
         </mxCell>
@@ -155,7 +140,7 @@
           <mxGeometry x="1006" y="635" width="100" height="38" as="geometry" />
         </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-64" value="&lt;font style=&quot;font-size: 15px&quot;&gt;glup 压缩&lt;/font&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="992" y="796" width="100" height="38" as="geometry" />
+          <mxGeometry x="991" y="858" width="100" height="38" as="geometry" />
         </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-65" value="&lt;div&gt;&lt;span style=&quot;font-size: 16px&quot;&gt;1. 产出 chunk.js 文件&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;div&gt;&lt;span&gt;2. webpack 阶段不压缩&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;3. frame 容器更改 runtime 代码&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="1163" y="299" width="366" height="180" as="geometry" />
@@ -168,6 +153,18 @@
               <mxPoint x="1136" y="724" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="BLUn2VgbFZo_RPLo1cwa-68" value="&lt;span style=&quot;font-size: 15px&quot;&gt;frame-修改 runtime&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1137" y="726" width="218" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="BLUn2VgbFZo_RPLo1cwa-69" value="&lt;span style=&quot;font-size: 15px&quot;&gt;上传 chunk 信息到 &lt;br&gt;node 服务器&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="825" width="221" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="BLUn2VgbFZo_RPLo1cwa-70" value="&lt;span style=&quot;font-size: 15px&quot;&gt;父子关联&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="994" y="797" width="100" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="BLUn2VgbFZo_RPLo1cwa-71" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;size=0.5;" vertex="1" parent="1">
+          <mxGeometry x="1104" y="756" width="20" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
