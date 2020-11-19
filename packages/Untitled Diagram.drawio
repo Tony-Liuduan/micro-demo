@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-19T12:09:13.510Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="JMx9MAjTXR67O9yPtUtt" version="13.10.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-19T12:09:36.483Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="HPONbhVcMYOKHWy1cw_5" version="13.10.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="1173" dy="794" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
       <root>
@@ -126,6 +126,9 @@
         </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-51" value="&lt;font style=&quot;font-size: 18px&quot;&gt;开发阶段&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
           <mxGeometry x="797" y="513" width="82" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BLUn2VgbFZo_RPLo1cwa-52" value="&lt;span style=&quot;font-size: 18px&quot;&gt;生产构建&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="1001" y="513" width="82" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
