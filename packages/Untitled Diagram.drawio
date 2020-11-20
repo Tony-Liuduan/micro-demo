@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-20T00:45:17.814Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="x6lYXEgkav62pcpNbCCF" version="13.10.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-20T00:45:42.077Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="Pl7luHcxW0-I7NSzA43I" version="13.10.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="1266" dy="1134" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-1" value="&lt;font style=&quot;font-size: 18px&quot;&gt;脚手架&lt;br&gt;@ada/microfe-cli&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="153" y="768" width="183" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="BLUn2VgbFZo_RPLo1cwa-2" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+        <mxCell id="BLUn2VgbFZo_RPLo1cwa-2" value="" style="endArrow=none;dashed=1;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="BLUn2VgbFZo_RPLo1cwa-79">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="475" y="1077" as="sourcePoint" />
             <mxPoint x="475" y="659" as="targetPoint" />
@@ -70,7 +70,7 @@
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-24" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="355" y="1076" as="sourcePoint" />
-            <mxPoint x="355" y="660" as="targetPoint" />
+            <mxPoint x="355" y="602" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-26" value="" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1">
