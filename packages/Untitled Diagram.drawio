@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-20T09:02:16.973Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="FJ2-DYmmePTpm07QHhov" version="13.10.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-20T09:03:51.963Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="7dYWd1Cowht0GvvicgUU" version="13.10.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="2993" dy="1985" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1408" dy="934" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -155,10 +155,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-68" value="&lt;span style=&quot;font-size: 15px&quot;&gt;frame-修改 runtime&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="1137" y="726" width="218" height="51" as="geometry" />
+          <mxGeometry x="1137" y="705" width="218" height="51" as="geometry" />
         </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-69" value="&lt;span style=&quot;font-size: 15px&quot;&gt;上传 chunk 信息到 &lt;br&gt;node 服务器&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="1134" y="825" width="221" height="51" as="geometry" />
+          <mxGeometry x="1128" y="849" width="221" height="51" as="geometry" />
         </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-70" value="&lt;span style=&quot;font-size: 15px&quot;&gt;父子关联&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="994" y="797" width="100" height="38" as="geometry" />
@@ -207,6 +207,9 @@
         </UserObject>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-82" value="&lt;ul&gt;&lt;li&gt;如下文件子 app 需要共用frame 中的, 以保证main.js 文件的一致性&lt;/li&gt;&lt;li&gt;app.module.ts&lt;/li&gt;&lt;li&gt;app.component.ts&lt;/li&gt;&lt;li&gt;app.component.html&lt;/li&gt;&lt;li&gt;app.component.scss&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
           <mxGeometry x="712" y="759" width="222" height="189" as="geometry" />
+        </mxCell>
+        <mxCell id="ztYK2yOgZ7Y24FhlgNG6-1" value="&lt;span style=&quot;font-size: 15px&quot;&gt;在 main.js 中获取懒加载 js 代码&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1137" y="777" width="218" height="51" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
