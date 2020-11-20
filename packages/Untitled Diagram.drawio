@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-20T00:45:57.312Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="7y42qR7hBktA0KzG3sEy" version="13.10.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-20T09:00:21.678Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="aCNIqbR-faf_GMao2O8-" version="13.10.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="1266" dy="1134" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="570" dy="378" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -205,6 +205,9 @@
             <mxGeometry x="472" y="568" width="256.5" height="20" as="geometry" />
           </mxCell>
         </UserObject>
+        <mxCell id="BLUn2VgbFZo_RPLo1cwa-82" value="&lt;ul&gt;&lt;li&gt;如下文件子 app 需要共用frame 中的, 以保证main.js 文件的一致性&lt;/li&gt;&lt;li&gt;app.module.ts&lt;/li&gt;&lt;li&gt;app.component.ts&lt;/li&gt;&lt;li&gt;app.component.html&lt;/li&gt;&lt;li&gt;app.component.scss&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="712" y="759" width="222" height="189" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
