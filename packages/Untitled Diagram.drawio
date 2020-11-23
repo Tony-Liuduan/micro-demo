@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-11-20T09:05:04.426Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="Ax-Enw5OkLadJnVnX0qW" version="13.10.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-23T09:55:37.923Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="NJu2DzNbWPPXfAt14Ibu" version="13.10.0" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="1408" dy="934" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="616" dy="934" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -155,7 +155,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-68" value="&lt;span style=&quot;font-size: 15px&quot;&gt;frame-修改 runtime&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="1137" y="705" width="218" height="51" as="geometry" />
+          <mxGeometry x="1144" y="723" width="218" height="51" as="geometry" />
         </mxCell>
         <mxCell id="BLUn2VgbFZo_RPLo1cwa-69" value="&lt;span style=&quot;font-size: 15px&quot;&gt;上传 chunk 信息到 &lt;br&gt;node 服务器&lt;/span&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="1128" y="849" width="221" height="51" as="geometry" />
