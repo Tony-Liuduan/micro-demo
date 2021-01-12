@@ -1,0 +1,191 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "mfe-shell": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/mfe-shell",
+      "sourceRoot": "projects/mfe-shell/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/mfe-shell",
+            "index": "projects/mfe-shell/src/index.html",
+            "main": "projects/mfe-shell/src/main.ts",
+            "polyfills": "projects/mfe-shell/src/polyfills.ts",
+            "tsConfig": "projects/mfe-shell/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/mfe-shell/src/favicon.ico",
+              "projects/mfe-shell/src/assets"
+            ],
+            "styles": [
+              "projects/mfe-shell/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "extraWebpackConfig": "projects/mfe-shell/webpack.config.prod.js",
+              "fileReplacements": [
+                {
+                  "replace": "projects/mfe-shell/src/environments/environment.ts",
+                  "with": "projects/mfe-shell/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "browserTarget": "mfe-shell:build",
+            "extraWebpackConfig": "projects/mfe-shell/webpack.config.js",
+            "port": 4200
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mfe-shell:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mfe-shell/tsconfig.app.json",
+              "projects/mfe-shell/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "mfe-app-profile": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/mfe-app-profile",
+      "sourceRoot": "projects/mfe-app-profile/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/mfe-app-profile",
+            "index": "projects/mfe-app-profile/src/index.html",
+            "main": "projects/mfe-app-profile/src/main.ts",
+            "polyfills": "projects/mfe-app-profile/src/polyfills.ts",
+            "tsConfig": "projects/mfe-app-profile/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/mfe-app-profile/src/favicon.ico",
+              "projects/mfe-app-profile/src/assets"
+            ],
+            "styles": [
+              "projects/mfe-app-profile/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "extraWebpackConfig": "projects/mfe-app-profile/webpack.config.prod.js",
+              "fileReplacements": [
+                {
+                  "replace": "projects/mfe-app-profile/src/environments/environment.ts",
+                  "with": "projects/mfe-app-profile/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "browserTarget": "mfe-app-profile:build",
+            "extraWebpackConfig": "projects/mfe-app-profile/webpack.config.js",
+            "port": 4201
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mfe-app-profile:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mfe-app-profile/tsconfig.app.json",
+              "projects/mfe-app-profile/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "mfe-shell",
+  "cli": {
+    "analytics": false
+  }
+}
