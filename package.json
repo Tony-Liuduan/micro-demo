@@ -1,26 +1,25 @@
 {
   "name": "micro-demo",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "private": true,
+  "repository": "https://github.com/Tony-Liuduan/micro-demo.git",
+  "author": "liuduan",
+  "license": "MIT",
+  "workspaces": [
+    "packages/microfe-react-example"
+  ],
   "scripts": {
-    "client:init": "lerna init",
-    "dev": "lerna run --parallel start",
-    "build": "lerna run --parallel build",
-    "serve": "lerna run --parallel serve"
+    "init": "lerna init",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "start": "lerna run --parallel start",
+    "build": "lerna run --parallel build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Tony-Liuduan/micro-demo.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Tony-Liuduan/micro-demo/issues"
-  },
-  "homepage": "https://github.com/Tony-Liuduan/micro-demo#readme",
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "husky": "^4.3.7",
+    "lerna": "^3.22.1",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
   }
 }

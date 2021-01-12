@@ -6,7 +6,7 @@
 * [AlloyTeam 团队 Blog](http://www.alloyteam.com/2020/04/14338/)
 * [micro-frontends-demo](https://github.com/micro-frontends-demo)
 * [掘金-微前端入门](https://juejin.im/post/5d8adb8ff265da5ba12cd173#heading-6)
-
+* [lerna](https://segmentfault.com/a/1190000023954051)
 
 ## run project --development
 ```sh
