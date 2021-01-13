@@ -1,13 +1,13 @@
-import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
-import { buildRoutes } from "../utils/route-utils";
-import { Microfrontend } from "./microfrontend.model";
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { buildRoutes } from '../utils/route-utils';
+import { Microfrontend } from './microfrontend.model';
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class MicrofrontendService {
   microfrontends: Microfrontend[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   /*
    * Initialize is called on app startup to load the initial list of
@@ -29,14 +29,14 @@ export class MicrofrontendService {
     return [
       {
         // For Loading
-        remoteEntry: "http://localhost:4201/remoteEntry.js",
-        remoteName: "profile",
-        exposedModule: "ProfileModule",
+        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        remoteName: 'profile',
+        exposedModule: 'ProfileModule',
 
         // For Routing, enabling us to ngFor over the microfrontends and dynamically create links for the routes
-        displayName: "Profile",
-        routePath: "profile",
-        ngModuleName: "ProfileModule",
+        displayName: 'Profile',
+        routePath: 'profile',
+        ngModuleName: 'ProfileModule',
       },
     ];
   }
