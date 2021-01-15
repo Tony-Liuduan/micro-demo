@@ -18,7 +18,7 @@ function loadRemoteEntry(remoteEntry: string): Promise<void> {
       return;
     }
 
-    const script = document.createElement("script");
+    const script = document.createElement('script');
     script.src = remoteEntry;
 
     script.onerror = reject;
@@ -37,10 +37,9 @@ async function lookupExposedModule<T>(
   exposedModule: string
 ): Promise<T> {
   // Initializes the share scope. This fills it with known provided modules from this build and all remotes
-  await __webpack_init_sharing__("default");
+  await __webpack_init_sharing__('default');
   const container = (window as any)[remoteName] as Container; // or get the container somewhere else
   // Initialize the container, it may provide shared modules
-
   await container.init(__webpack_share_scopes__.default);
   const factory = await container.get(exposedModule);
   const Module = factory();
@@ -56,7 +55,17 @@ export type LoadRemoteModuleOptions = {
 export async function loadRemoteModule(
   options: LoadRemoteModuleOptions
 ): Promise<any> {
-  await loadRemoteEntry(options.remoteEntry);
+  /*
+  options = {
+    displayName: "Profile"
+    exposedModule: "ProfileModule"
+    ngModuleName: "ProfileModule"
+    remoteEntry: "http://localhost:4201/remoteEntry.js"
+    remoteName: "profile"
+    routePath: "profile"
+  }
+  */
+  await loadRemoteEntry(options.remoteEntry); // hack 执行 remoteUrl script load
   return await lookupExposedModule<any>(
     options.remoteName,
     options.exposedModule

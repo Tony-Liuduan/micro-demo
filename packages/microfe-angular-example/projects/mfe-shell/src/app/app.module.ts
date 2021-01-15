@@ -22,8 +22,8 @@ export function initializeApp(
     AppRoutingModule
   ],
   providers: [
-    MicrofrontendService,
     {
+      // 在 Angular 应用程序启动的时候，执行一些初始化操作
       provide: APP_INITIALIZER,
       useFactory: initializeApp,
       multi: true,
