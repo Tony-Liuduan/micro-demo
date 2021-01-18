@@ -6,7 +6,7 @@ type Container = {
   get(module: string): Factory;
 };
 
-declare const __webpack_init_sharing__: (shareScope: string) => Promise<void>;
+declare const __webpack_init_sharing__: (shareScope: string) => Promise<void>; // webpack
 declare const __webpack_share_scopes__: { default: Scope };
 
 const moduleMap: any = {};
@@ -37,10 +37,10 @@ async function lookupExposedModule<T>(
   exposedModule: string
 ): Promise<T> {
   // Initializes the share scope. This fills it with known provided modules from this build and all remotes
-  await __webpack_init_sharing__('default');
+  await __webpack_init_sharing__('default'); // 构建后结果: yield __webpack_require__.I('default');
   const container = (window as any)[remoteName] as Container; // or get the container somewhere else
   // Initialize the container, it may provide shared modules
-  await container.init(__webpack_share_scopes__.default);
+  await container.init(__webpack_share_scopes__.default);  // yield container.init(__webpack_require__.S.default);
   const factory = await container.get(exposedModule);
   const Module = factory();
   return Module as T;

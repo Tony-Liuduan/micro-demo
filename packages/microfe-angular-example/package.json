@@ -6,6 +6,7 @@
     "start": "ng serve",
     "start:profile": "ng serve mfe-app-profile",
     "build": "ng build",
+    "build:profile": "ng build mfe-app-profile",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
