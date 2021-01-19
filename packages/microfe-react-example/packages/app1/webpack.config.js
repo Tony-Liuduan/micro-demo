@@ -31,19 +31,22 @@ module.exports = {
     //     'react': 'React',
     //     'react-dom': 'ReactDOM',
     // },
+    optimization: {
+        runtimeChunk: false,
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new ModuleFederationPlugin({
             name: 'app1',
             library: { type: 'var', name: 'app1' },
-            remotes: { app2: 'app2' },
+            remotes: { app2: 'app2' }, // 类似 externals,  值是 App2 lib name, key 是 App1 中调用时用的名字
             shared: /* ['react', 'react-dom'] ||  */ {
                 'react': {
-                    eager: true,
+                    eager: false,
                     singleton: true,
                 },
                 'react-dom': {
-                    eager: true,
+                    eager: false,
                     singleton: true,
                 },
             },

@@ -31,6 +31,9 @@ module.exports = {
     //     'react': 'React',
     //     'react-dom': 'ReactDOM',
     // },
+    optimization: {
+        runtimeChunk: false,
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new ModuleFederationPlugin({
@@ -40,14 +43,14 @@ module.exports = {
                 './Button': './src/Button',
                 './Counter': './src/Counter',
             },
-            filename: 'remoteEntry.js',
+            filename: 'remoteEntry.js', // 提供给 remote 加载的 js 文件名
             shared: /* ['react', 'react-dom'] ||  */{
                 'react': {
-                    eager: true,
+                    eager: false, // true: react 模块被整个放进 main.js, false: react 模块被单独抽离到 vender-react.js 中
                     singleton: true,
                 },
                 'react-dom': {
-                    eager: true,
+                    eager: false,
                     singleton: true,
                 },
             },
