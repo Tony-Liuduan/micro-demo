@@ -11,7 +11,7 @@ module.exports = {
     plugins: [
         new ModuleFederationPlugin({
             shared: {
-                "@angular/core": { eager: true, singleton: true },
+                "@angular/core": { eager: true, singleton: true }, // eager 设置为 false 报错... crazy
                 "@angular/common": { eager: true, singleton: true },
                 "@angular/router": { eager: true, singleton: true },
             },

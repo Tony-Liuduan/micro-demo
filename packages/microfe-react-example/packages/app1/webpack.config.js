@@ -1,6 +1,5 @@
 const path = require("path");
 const ModuleFederationPlugin = require('webpack').container.ModuleFederationPlugin;
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
@@ -12,6 +11,7 @@ module.exports = {
     },
     output: {
         publicPath: "http://localhost:3001/",
+        uniqueName: "webpack-app1", // webpack 编译唯一标识
     },
     module: {
         rules: [
@@ -35,9 +35,8 @@ module.exports = {
         runtimeChunk: false,
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new ModuleFederationPlugin({
-            name: 'app1',
+            name: 'app1ModuleName',
             library: { type: 'var', name: 'app1' },
             remotes: { app2: 'app2' }, // 类似 externals,  值是 App2 lib name, key 是 App1 中调用时用的名字
             shared: /* ['react', 'react-dom'] ||  */ {

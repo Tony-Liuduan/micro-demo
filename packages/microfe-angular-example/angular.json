@@ -45,24 +45,12 @@
                 }
               ],
               "optimization": false,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": false,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ]
+              "buildOptimizer": false
             }
           }
         },
@@ -83,8 +71,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/mfe-shell/tsconfig.app.json",
-              "projects/mfe-shell/tsconfig.spec.json"
+              "projects/mfe-shell/tsconfig.app.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -135,24 +122,12 @@
                 }
               ],
               "optimization": false,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": false,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ]
+              "buildOptimizer": false
             }
           }
         },
@@ -173,8 +148,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/mfe-app-profile/tsconfig.app.json",
-              "projects/mfe-app-profile/tsconfig.spec.json"
+              "projects/mfe-app-profile/tsconfig.app.json"
             ],
             "exclude": [
               "**/node_modules/**"

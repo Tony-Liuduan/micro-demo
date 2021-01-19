@@ -1,6 +1,5 @@
 const path = require('path');
 const ModuleFederationPlugin = require('webpack').container.ModuleFederationPlugin;
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
@@ -12,6 +11,7 @@ module.exports = {
     },
     output: {
         publicPath: 'http://localhost:3002/',
+        uniqueName: "webpack-app2", // webpack 编译唯一标识
     },
     module: {
         rules: [
@@ -35,10 +35,9 @@ module.exports = {
         runtimeChunk: false,
     },
     plugins: [
-        new CleanWebpackPlugin(),
         new ModuleFederationPlugin({
-            name: 'app2',
-            library: { type: 'var', name: 'app2' },
+            name: 'app2ModuleName',
+            library: { type: 'var', name: 'app2' }, // 给 window 上挂的变量名
             exposes: {
                 './Button': './src/Button',
                 './Counter': './src/Counter',

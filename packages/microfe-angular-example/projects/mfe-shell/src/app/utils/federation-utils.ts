@@ -28,7 +28,7 @@ function loadRemoteEntry(remoteEntry: string): Promise<void> {
       resolve(); // window is the global namespace
     };
 
-    document.body.append(script);
+    document.head.append(script);
   });
 }
 

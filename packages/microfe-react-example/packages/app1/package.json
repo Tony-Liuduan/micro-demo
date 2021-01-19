@@ -2,7 +2,7 @@
   "name": "app1",
   "version": "1.0.0",
   "license": "ISC",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "dev": "webpack serve --mode development --env development",
     "build": "rm -rf dist && webpack",
@@ -17,7 +17,6 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "bundle-loader": "^0.5.6",
-    "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^4.5.1",
     "serve": "^11.3.2",
     "webpack": "^5.15.0",

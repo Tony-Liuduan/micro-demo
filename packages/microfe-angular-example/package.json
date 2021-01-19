@@ -2,18 +2,17 @@
   "name": "microfe-angular-example",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "start:profile": "ng serve mfe-app-profile",
-    "build": "ng build",
-    "build:profile": "ng build mfe-app-profile",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "dev": "ng serve",
+    "dev:profile": "ng serve mfe-app-profile",
+    "build": "ng build --prod",
+    "build:profile": "ng build mfe-app-profile --prod",
+    "serve": "serve dist/mfe-shell -p 4200",
+    "serve:profile": "serve dist/mfe-app-profile -p 4201"
   },
   "private": true,
   "resolutions": {
-    "webpack": "5.4.0"
+    "html-webpack-plugin": "4.5.1",
+    "webpack": "5.15.0"
   },
   "dependencies": {
     "@angular/animations": "~11.0.5",
@@ -39,6 +38,7 @@
     "jasmine-spec-reporter": "~5.0.0",
     "ngx-build-plus": "^11.0.0",
     "protractor": "~7.0.0",
+    "serve": "^11.3.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
