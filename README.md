@@ -8,19 +8,6 @@
 * [掘金-微前端入门](https://juejin.im/post/5d8adb8ff265da5ba12cd173#heading-6)
 * [lerna](https://segmentfault.com/a/1190000023954051)
 
-## run project --development
-```sh
-npm run dev
-```
-
-## run project --production
-```sh
-npm run build
-npm run serve
-```
-
-
-
 ### 重载
 共享模块是指既可重写的又可作为向嵌套容器提供重写的模块。它们通常指向每个构建中的相同模块，例如相同的库。
 requiredVersion??

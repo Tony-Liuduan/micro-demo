@@ -1,17 +1,14 @@
 {
   "name": "app2",
   "version": "1.0.0",
-  "description": "",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server",
     "build": "npm run clean && webpack",
     "serve": "serve dist -p 3002",
     "clean": "rm -rf dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
