@@ -149,6 +149,7 @@ async function lookupExposedModule<T>(
   const container = (window as any)[remoteName] as Container;
   
   // Initialize the container, it may provide shared modules
+  // 将 host 的 __webpack_require__.S 同步给 remote 的 __webpack_require__.S
   await container.init(__webpack_share_scopes__.default);  // webpack 会自动将 __webpack_share_scopes__ 转为 __webpack_require__.S /// container.init(__webpack_require__.S.default);
   
   const factory = await container.get(exposedModule);
