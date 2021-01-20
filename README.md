@@ -244,7 +244,7 @@ script.src 方式加载, 加载成功后 remove script
 ### 2. 版本维护
 
 * 2.1 发问: 继续 npm 包方式版本维护?
-  - 不同
+  - tips: 不同的版本生成的公共库 id 不同，还是会导致重复加载
   - 思路: 维护一个配置平台  + node 服务
     + node 服务 
       * 1.负责收集 remote 模块信息, 包括: 模块 key, 模块 cdn 地址, 操作人, 操作时间, 使用环境... (模块整体 js  zip 提交)
@@ -253,4 +253,6 @@ script.src 方式加载, 加载成功后 remove script
       * 1.负责配置 remote list json 表, 默认读取最新
       * 2.可操作回滚历史版本
   
-### 3. TODO:无视技术栈 
+### 3. 无视技术栈 
+  - angular 项目 remote react chunk, 无共享依赖, 通过路由方式接入?
+  - angualr / react 多仓库 or 单仓库 多 package.json ?
