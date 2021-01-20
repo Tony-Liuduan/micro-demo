@@ -59,7 +59,7 @@
                         eager: false, // true: react 模块被整个放进 main.js, false: react 模块被单独抽离到 vender-react.js 中
                         // FIXME: angualr 中 eager 设置为 false 报错... crazy
                         singleton: true,
-                        requiredVersion: deps.react, // 版本控制
+                        requiredVersion: deps.react, // 版本控制, 不同的版本生成的公共库 id 不同，还是会导致重复加载
                     },
                     'react-dom': {
                         eager: false,
@@ -223,6 +223,17 @@ __webpack_require__.e("src_bootstrap_js");
 script.src 方式加载, 加载成功后 remove script
 
 
+### 3. 总结: 顺序输出
+1. 动态加载 src_bootstrap_js 这个 chunk
+2. 经过 __webpack_require__.f.remotes
+  - __webpack_require__ 获取 remote module.export (var app2, 全局变量获取)
+  - __webpack_require__.I 给 __webpack_require__.S 赋值, 执行 remoteModuel.export.init(__webpack_require__.S.default)
+  - 执行 remoteEntry 中的 __webpack_require__.I('default'); 给 remoteEntry 中的 __webpack_require__.S  赋值
+  - 执行 remoteModuel.export.get(), 期间会加重模块需要的依赖, 就是通过 __webpack_require__.l 加载, 依赖加载完后再加载需要的模块
+  - 将执行结果赋值给 remote 模块的 export
+2. 经过 __webpack_require__.f.consumes, 检查 shered js 是否加载 (依赖 __webpack_require__.S.default 指向同一个 object), 如果加载了就使用缓存, 没加载加载就去 load shared js
+3. 经过 __webpack_require__.f.j, 去加载 src_bootstrap_js chunk
+
 ---
 
 ## 思考: module-federation 到底能帮助我们做什么?
@@ -233,6 +244,7 @@ script.src 方式加载, 加载成功后 remove script
 ### 2. 版本维护
 
 * 2.1 发问: 继续 npm 包方式版本维护?
+  - 不同
   - 思路: 维护一个配置平台  + node 服务
     + node 服务 
       * 1.负责收集 remote 模块信息, 包括: 模块 key, 模块 cdn 地址, 操作人, 操作时间, 使用环境... (模块整体 js  zip 提交)
