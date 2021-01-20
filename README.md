@@ -59,6 +59,7 @@
                         eager: false, // true: react 模块被整个放进 main.js, false: react 模块被单独抽离到 vender-react.js 中
                         // FIXME: angualr 中 eager 设置为 false 报错... crazy
                         singleton: true,
+                        requiredVersion: deps.react, // 版本控制
                     },
                     'react-dom': {
                         eager: false,
