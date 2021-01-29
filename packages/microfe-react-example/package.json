@@ -12,7 +12,9 @@
         "bootstrap": "lerna bootstrap",
         "dev": "lerna run --parallel dev",
         "build": "lerna run --parallel build",
-        "serve": "lerna run --parallel serve"
+        "serve": "lerna run --parallel serve",
+        "dev:app1": "lerna run dev --scope app1",
+        "dev:app2": "lerna run dev --scope app2"
     },
     "devDependencies": {
         "lerna": "^3.22.1"

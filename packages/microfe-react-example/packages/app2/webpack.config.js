@@ -11,6 +11,7 @@ module.exports = {
     },
     output: {
         publicPath: 'http://localhost:3002/',
+        filename: '[name].[chunkhash].js',
         uniqueName: "webpack-app2", // webpack 编译唯一标识
     },
     module: {
@@ -56,6 +57,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './public/index.html',
+            chunks: ['main']
         }),
     ],
 };

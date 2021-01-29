@@ -2,6 +2,7 @@ import React from 'react';
 
 import LocalButton from './Button.js';
 import LocalCounter from './Counter.js';
+import SharedButton from '../../../shered/Button.js';
 
 const App = () => (
   <div>
@@ -9,6 +10,7 @@ const App = () => (
     <h2>App 2</h2>
     <LocalButton />
     <LocalCounter />
+    <SharedButton />
   </div>
 );
 
