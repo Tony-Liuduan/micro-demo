@@ -21,7 +21,7 @@ export class ReactPageComponent implements OnInit, OnDestroy {
     this.ngZone.runOutsideAngular(() => {
       ReactDOM.render(
         <React.Suspense fallback='Loading Button'>
-          <RemoteButton></RemoteButton>
+          <RemoteButton />
         </React.Suspense>,
         this.root.nativeElement
       );
