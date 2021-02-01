@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MicrofrontendService } from './microfrontends/microfrontend.service';
 import { HomeComponent } from './home/home.component';
+import { ReactPageComponent } from './react-page/react-page.component';
 
 export function initializeApp(
   mfService: MicrofrontendService
@@ -15,7 +16,8 @@ export function initializeApp(
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ReactPageComponent
   ],
   imports: [
     BrowserModule,
