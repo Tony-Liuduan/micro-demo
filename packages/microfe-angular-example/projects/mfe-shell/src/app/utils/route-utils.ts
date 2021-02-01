@@ -1,7 +1,6 @@
 import { loadRemoteModule } from './federation-utils';
 import { Routes } from '@angular/router';
 import { Microfrontend } from '../microfrontends/microfrontend.model';
-import { APP_ROUTES } from '../app.routes';
 
 export function buildRoutes(options: Microfrontend[]): Routes {
   /* {
@@ -18,5 +17,5 @@ export function buildRoutes(options: Microfrontend[]): Routes {
     loadChildren: () => loadRemoteModule(o).then((m) => m[o.ngModuleName]),
   }));
 
-  return [...APP_ROUTES, ...lazyRoutes];
+  return [...lazyRoutes];
 }

@@ -16,7 +16,9 @@ export class MicrofrontendService {
   initialise(): Promise<void> {
     return new Promise<void>((resolve, reject) => {
       this.microfrontends = this.loadConfig();
-      this.router.resetConfig(buildRoutes(this.microfrontends));
+      let config = this.router.config;
+      config = config.concat(buildRoutes(this.microfrontends));
+      this.router.resetConfig(config);
       resolve();
     });
   }
@@ -31,7 +33,7 @@ export class MicrofrontendService {
         // For Loading
         remoteEntry: 'http://localhost:4201/remoteEntry.js',
         remoteName: 'profile',
-        exposedModule: 'ProfileModule',
+        exposedModule: './ProfileModule',
 
         // For Routing, enabling us to ngFor over the microfrontends and dynamically create links for the routes
         displayName: 'Profile',

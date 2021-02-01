@@ -11,9 +11,9 @@ declare const __webpack_share_scopes__: { default: Scope };
 
 const moduleMap: any = {};
 
-function loadRemoteEntry(remoteEntry: string): Promise<void> {
+function loadRemoteEntry(remoteEntry: string, remoteName: string): Promise<void> {
   return new Promise<void>((resolve, reject) => {
-    if (moduleMap[remoteEntry]) {
+    if ((window as any)[remoteName] || moduleMap[remoteEntry]) {
       resolve();
       return;
     }
@@ -65,7 +65,7 @@ export async function loadRemoteModule(
     routePath: "profile"
   }
   */
-  await loadRemoteEntry(options.remoteEntry); // hack 执行 remoteUrl script load
+  await loadRemoteEntry(options.remoteEntry, options.remoteName); // hack 执行 remoteUrl script load
   return await lookupExposedModule<any>(
     options.remoteName,
     options.exposedModule

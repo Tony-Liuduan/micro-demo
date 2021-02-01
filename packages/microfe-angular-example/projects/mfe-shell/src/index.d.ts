@@ -3,3 +3,7 @@ declare module 'app2/Button' {
 
     export default Button;
 }
+
+declare module 'profile/ProfileModule' {
+    export const ProfileModule: any;
+}

@@ -14,7 +14,7 @@ module.exports = {
             library: { type: "var", name: "profile" },
             filename: "remoteEntry.js",
             exposes: {
-                ProfileModule:
+                './ProfileModule':
                     "./projects/mfe-app-profile/src/app/profile/profile.module.ts",
             },
             shared: {
