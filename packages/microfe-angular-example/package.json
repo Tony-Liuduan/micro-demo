@@ -16,12 +16,13 @@
         "bootstrap": "lerna bootstrap",
         "dev": "lerna run --parallel dev",
         "dev:filter": "lerna run --parallel dev --scope mfe-shell --scope mfe-app-profile",
-        "dev:shell": "lerna run --parallel dev --scope mfe-shell",
-        "dev:profile": "lerna run  --parallel dev --scope mfe-app-profile",
+        "dev:shell": "lerna run dev --scope mfe-shell --stream",
+        "dev:profile": "lerna run  dev --scope mfe-app-profile --stream",
         "build": "lerna run --parallel build",
-        "serve": "lerna run --parallel serve"
+        "serve": "serve ./dist/microfe-angular-example -p 4200"
     },
     "devDependencies": {
-        "lerna": "^3.22.1"
+        "lerna": "^3.22.1",
+        "serve": "^11.3.2"
     }
 }

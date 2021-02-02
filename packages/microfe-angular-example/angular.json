@@ -20,8 +20,8 @@
         "build": {
           "builder": "ngx-build-plus:browser",
           "options": {
-            "outputPath": "dist/mfe-shell",
-            "index": "projects/mfe-shell/src/index.html",
+            "outputPath": "dist/microfe-angular-example",
+            "index": "projects/mfe-shell/src/public/dev/index.html",
             "main": "projects/mfe-shell/src/main.ts",
             "polyfills": "projects/mfe-shell/src/polyfills.ts",
             "tsConfig": "projects/mfe-shell/tsconfig.app.json",
@@ -37,6 +37,7 @@
           },
           "configurations": {
             "production": {
+              "index": "projects/mfe-shell/src/public/prod/index.html",
               "extraWebpackConfig": "projects/mfe-shell/webpack.config.prod.js",
               "fileReplacements": [
                 {
@@ -97,8 +98,8 @@
         "build": {
           "builder": "ngx-build-plus:browser",
           "options": {
-            "outputPath": "dist/mfe-app-profile",
-            "index": "projects/mfe-app-profile/src/index.html",
+            "outputPath": "dist/microfe-angular-example/app-profile",
+            "index": "projects/mfe-app-profile/src/public/dev/index.html",
             "main": "projects/mfe-app-profile/src/main.ts",
             "polyfills": "projects/mfe-app-profile/src/polyfills.ts",
             "tsConfig": "projects/mfe-app-profile/tsconfig.app.json",
@@ -114,6 +115,7 @@
           },
           "configurations": {
             "production": {
+              "index": "projects/mfe-app-profile/src/public/prod/index.html",
               "extraWebpackConfig": "projects/mfe-app-profile/webpack.config.prod.js",
               "fileReplacements": [
                 {

@@ -7,6 +7,7 @@
 * [micro-frontends-demo](https://github.com/micro-frontends-demo)
 * [掘金-微前端入门](https://juejin.im/post/5d8adb8ff265da5ba12cd173#heading-6)
 * [lerna](https://segmentfault.com/a/1190000023954051)
+* [lerna 命令](https://segmentfault.com/a/1190000023059277)
 
 
 ## 共享模块实现方式
@@ -269,3 +270,24 @@ script.src 方式加载, 加载成功后 remove script
   ```
 
   上面代码必须设置, 将同步入口变为异步
+
+
+  ## lerna 
+
+  ```shell
+  # 运行所有子模块  
+  lerna run start
+  # 运行 antd 模块，注意 scope 后为包名，而非文件名
+  lerna run start --scope antd
+
+  # 添加 --stream 参数，在终端打印运行日志信息
+  lerna run start --scope antd --stream
+
+  # lerna add <moduleName>  // 所有子包都添加这个依赖
+  # lerna add <moduleName> --scope = <pkgName> // 给scope后的包添加依赖
+  # lerna add <pkgName1> --scope = <pkgName2> // 给pkgName2中添加pkgName1，包内的互相引用，会复制pkgName1到pkgName2中
+
+  # lerna exec -- <command> [..args] # 在所有包中运行该命令
+  # 例子
+  lerna exec --scope=antd  yarn remove webpack # 将 antd 包下的 webpack 卸载
+  ```
