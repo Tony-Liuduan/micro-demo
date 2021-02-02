@@ -15,10 +15,11 @@
         "init": "lerna init",
         "bootstrap": "lerna bootstrap",
         "dev": "lerna run --parallel dev",
+        "dev:filter": "lerna run --parallel dev --scope mfe-shell --scope mfe-app-profile",
+        "dev:shell": "lerna run --parallel dev --scope mfe-shell",
+        "dev:profile": "lerna run  --parallel dev --scope mfe-app-profile",
         "build": "lerna run --parallel build",
-        "serve": "lerna run --parallel serve",
-        "dev:shell": "lerna run dev --scope mfe-shell",
-        "dev:profile": "lerna run dev --scope mfe-app-profile"
+        "serve": "lerna run --parallel serve"
     },
     "devDependencies": {
         "lerna": "^3.22.1"

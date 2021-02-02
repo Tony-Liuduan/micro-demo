@@ -1,18 +1,13 @@
 init:
 	yarn install
+	npm run init
+	npm run bootstrap
 
 dev:
 	npm run dev
 
-dev-profile:
-	npm run dev:profile
-
 build: 
 	npm run build
-	npm run build:profile
 
 serve: 
 	npm run serve
-
-serve-profile:
-	npm run serve:profile
