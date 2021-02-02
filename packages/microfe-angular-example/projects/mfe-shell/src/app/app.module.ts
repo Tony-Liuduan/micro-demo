@@ -17,7 +17,7 @@ export function initializeApp(
   declarations: [
     AppComponent,
     HomeComponent,
-    ReactPageComponent
+    ReactPageComponent,
   ],
   imports: [
     BrowserModule,

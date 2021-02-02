@@ -7,3 +7,7 @@ declare module 'app2/Button' {
 declare module 'profile/ProfileModule' {
     export const ProfileModule: any;
 }
+
+declare module 'profile/ProfileComponent' {
+    export const ProfileComponent: any;
+}

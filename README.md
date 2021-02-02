@@ -257,3 +257,15 @@ script.src 方式加载, 加载成功后 remove script
 ### 3. 无视技术栈 
   - angular 项目 remote react chunk, 无共享依赖, 通过路由方式接入?
   - angualr / react 多仓库 or 单仓库 多 package.json ?
+
+
+
+  ## 踩过的坑
+
+  1. 如需同步加载 remote 组件
+
+  ```ts
+  import('./bootstrap');
+  ```
+
+  上面代码必须设置, 将同步入口变为异步
