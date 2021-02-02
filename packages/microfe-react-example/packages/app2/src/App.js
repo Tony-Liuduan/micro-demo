@@ -2,7 +2,7 @@ import React from 'react';
 
 import LocalButton from './Button.js';
 import LocalCounter from './Counter.js';
-import SharedButton from '../../../shered/Button.js';
+import SharedButton from '../../../shared/Button.js';
 
 const App = () => (
   <div>

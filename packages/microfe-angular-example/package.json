@@ -1,50 +1,26 @@
 {
-  "name": "microfe-angular-example",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "ng serve",
-    "dev:profile": "ng serve mfe-app-profile",
-    "build": "ng build --prod",
-    "build:profile": "ng build mfe-app-profile --prod",
-    "serve": "serve dist/mfe-shell -p 4200",
-    "serve:profile": "serve dist/mfe-app-profile -p 4201"
-  },
-  "private": true,
-  "resolutions": {
-    "html-webpack-plugin": "4.5.1",
-    "webpack": "5.15.0"
-  },
-  "dependencies": {
-    "@angular/animations": "~11.0.5",
-    "@angular/common": "~11.0.5",
-    "@angular/compiler": "~11.0.5",
-    "@angular/core": "~11.0.5",
-    "@angular/forms": "~11.0.5",
-    "@angular/platform-browser": "~11.0.5",
-    "@angular/platform-browser-dynamic": "~11.0.5",
-    "@angular/router": "~11.0.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1100.5",
-    "@angular/cli": "~11.0.5",
-    "@angular/compiler-cli": "~11.0.5",
-    "@types/jasmine": "~3.6.0",
-    "@types/node": "^12.11.1",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "codelyzer": "^6.0.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "ngx-build-plus": "^11.0.0",
-    "protractor": "~7.0.0",
-    "serve": "^11.3.2",
-    "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
-  }
+    "name": "microfe-react-example",
+    "version": "1.0.0",
+    "private": true,
+    "license": "ISC",
+    "main": "index.js",
+    "workspaces": [
+        "projects/*"
+    ],
+    "resolutions": {
+        "html-webpack-plugin": "4.5.1",
+        "webpack": "5.15.0"
+    },
+    "scripts": {
+        "init": "lerna init",
+        "bootstrap": "lerna bootstrap",
+        "dev": "lerna run --parallel dev",
+        "build": "lerna run --parallel build",
+        "serve": "lerna run --parallel serve",
+        "dev:shell": "lerna run dev --scope mfe-shell",
+        "dev:profile": "lerna run dev --scope mfe-app-profile"
+    },
+    "devDependencies": {
+        "lerna": "^3.22.1"
+    }
 }

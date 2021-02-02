@@ -12,10 +12,15 @@ module.exports = {
         new ModuleFederationPlugin({
             name: "profile",
             library: { type: "var", name: "profile" },
+            remotes: {
+                shell: 'shell',
+            },
             filename: "remoteEntry.js",
             exposes: {
-                ProfileModule:
+                './ProfileModule':
                     "./projects/mfe-app-profile/src/app/profile/profile.module.ts",
+                './ProfileComponent':
+                    "./projects/mfe-app-profile/src/app/profile/profile.component.ts",
             },
             shared: {
                 "@angular/core": { eager: true, singleton: true },
