@@ -33,7 +33,8 @@
             "styles": [
               "projects/mfe-shell/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "deployUrl": "http://localhost:4200/"
           },
           "configurations": {
             "production": {
@@ -51,7 +52,8 @@
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": false
+              "buildOptimizer": false,
+              "deployUrl": "http://localhost:4200/"
             }
           }
         },
@@ -111,7 +113,8 @@
             "styles": [
               "projects/mfe-app-profile/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [], 
+            "deployUrl": "http://localhost:4201/"
           },
           "configurations": {
             "production": {
@@ -129,7 +132,8 @@
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": false
+              "buildOptimizer": false,
+              "deployUrl": "http://localhost:4200/app-profile/"
             }
           }
         },

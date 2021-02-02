@@ -2,7 +2,6 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 module.exports = {
     output: {
-        publicPath: "http://localhost:4201/",
         uniqueName: "app-profile",
     },
     optimization: {
