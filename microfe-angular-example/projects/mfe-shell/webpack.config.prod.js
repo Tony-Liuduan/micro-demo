@@ -24,9 +24,11 @@ module.exports = {
                     "./projects/mfe-shell/src/app/home/home.component.ts",
             },
             shared: {
-                "@angular/core": { eager: true, singleton: true }, // eager 设置为 false 报错... crazy
-                "@angular/common": { eager: true, singleton: true },
-                "@angular/router": { eager: true, singleton: true },
+                "@angular/core": { eager: false, singleton: true },
+                "@angular/common": { eager: false, singleton: true },
+                "@angular/router": { eager: false, singleton: true },
+                "rxjs": { eager: false, singleton: true },
+                "zone.js": { eager: false, singleton: true },
             },
         }),
     ],

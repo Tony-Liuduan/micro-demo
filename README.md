@@ -275,6 +275,12 @@ script.src 方式加载, 加载成功后 remove script
   ## lerna 
 
   ```shell
+  yarn global add lerna
+  lerna init
+  lerna bootstrap
+
+  lerna add lodash -D --scope=house
+
   # 运行所有子模块  
   lerna run start
   # 运行 antd 模块，注意 scope 后为包名，而非文件名
@@ -290,4 +296,10 @@ script.src 方式加载, 加载成功后 remove script
   # lerna exec -- <command> [..args] # 在所有包中运行该命令
   # 例子
   lerna exec --scope=antd  yarn remove webpack # 将 antd 包下的 webpack 卸载
+
+  # http://www.sosout.com/2018/07/21/lerna-repo.html
+
+
+  # 在根目录安装 npm 包，以 danger 为例：
+  yarn add danger --dev -W
   ```

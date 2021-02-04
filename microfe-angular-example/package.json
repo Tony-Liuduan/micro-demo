@@ -14,7 +14,7 @@
     "scripts": {
         "init": "lerna init",
         "bootstrap": "lerna bootstrap",
-        "dev": "lerna run --parallel dev",
+        "dev": "lerna run --parallel dev --stream",
         "dev:filter": "lerna run --parallel dev --scope mfe-shell --scope mfe-app-profile",
         "dev:shell": "lerna run dev --scope mfe-shell --stream",
         "dev:profile": "lerna run  dev --scope mfe-app-profile --stream",

@@ -14,8 +14,8 @@ export class MicrofrontendService {
    * remote microfrontends and configure them within the router
    */
   initialise(): Promise<void> {
-    return new Promise<void>((resolve, reject) => {
-      this.microfrontends = this.loadConfig();
+    return new Promise<void>(async (resolve, reject) => {
+      this.microfrontends = await this.loadConfig();
       let config = this.router.config;
       config = config.concat(buildRoutes(this.microfrontends));
       this.router.resetConfig(config);
@@ -23,23 +23,24 @@ export class MicrofrontendService {
     });
   }
 
-  /*
-   * This is just an hardcoded list of remote microfrontends, but could easily be updated
-   * to load the config from a database or external file
-   */
-  loadConfig(): Microfrontend[] {
-    return [
-      {
-        // For Loading
-        remoteEntry: 'http://localhost:4201/remoteEntry.js',
-        remoteName: 'profile',
-        exposedModule: './ProfileModule',
-
-        // For Routing, enabling us to ngFor over the microfrontends and dynamically create links for the routes
-        displayName: 'Profile',
-        routePath: 'profile',
-        ngModuleName: 'ProfileModule',
-      },
-    ];
+  loadConfig(): Promise<Microfrontend[]> {
+    return import('@configs/module-federation').then((microFrontendRoutes: any) => {
+      const remoteRouteConfigs: any[] = [];
+      Object.keys(microFrontendRoutes).forEach(key => {
+        const config: any = microFrontendRoutes[key];
+        const remoteEntry = `${config.origin}${config.filename}`;
+        config.exposes?.forEach((item: any) => {
+          if (item.routeConfig) {
+            remoteRouteConfigs.push({
+              ...item.routeConfig,
+              remoteEntry,
+              remoteName: config.libraryName,
+              exposedModule: item.exposedName,
+            });
+          }
+        });
+      });
+      return remoteRouteConfigs;
+    });
   }
 }

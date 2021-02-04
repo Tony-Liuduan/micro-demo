@@ -53,6 +53,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": false,
+              "aot": false,
               "deployUrl": "http://localhost:4200/"
             }
           }
@@ -133,6 +134,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": false,
+              "aot": false,
               "deployUrl": "http://localhost:4200/app-profile/"
             }
           }
