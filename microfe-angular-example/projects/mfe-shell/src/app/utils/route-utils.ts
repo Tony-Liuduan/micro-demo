@@ -13,8 +13,14 @@ export function buildRoutes(options: Microfrontend[]): Routes {
   } */
   const lazyRoutes: Routes = options.map((o) => ({
     path: o.routePath,
+    children: [
+      {
+        path: '**',
+        loadChildren: () => loadRemoteModule(o).then((m) => m[o.ngModuleName]),
+      },
+    ]
     // loadChildren: () => import('xxpath').then(m => m.XxxModule),
-    loadChildren: () => loadRemoteModule(o).then((m) => m[o.ngModuleName]),
+    // loadChildren: () => loadRemoteModule(o).then((m) => m[o.ngModuleName]),
   }));
 
   return [...lazyRoutes];
