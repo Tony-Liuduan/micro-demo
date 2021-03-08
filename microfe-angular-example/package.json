@@ -20,7 +20,8 @@
         "dev:shell": "lerna run dev --scope mfe-shell --stream",
         "dev:profile": "lerna run  dev --scope mfe-app-profile --stream",
         "build": "lerna run --parallel build",
-        "serve": "serve ./dist/microfe-angular-example -p 4200"
+        "serve": "serve ./dist/microfe-angular-example -p 4200",
+        "publish": "lerna publish"
     },
     "config": {
         "commitizen": {
@@ -39,6 +40,8 @@
         "cz-lerna-changelog": "^2.0.3",
         "husky": "^5.1.3",
         "lerna": "^3.22.1",
-        "serve": "^11.3.2"
+        "lint-staged": "^10.5.4",
+        "serve": "^11.3.2",
+        "standard": "^16.0.3"
     }
 }
