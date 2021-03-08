@@ -12,6 +12,7 @@
         "webpack": "5.15.0"
     },
     "scripts": {
+        "c": "git-cz",
         "init": "lerna init",
         "bootstrap": "lerna bootstrap",
         "dev": "lerna run --parallel dev --stream",
@@ -21,7 +22,14 @@
         "build": "lerna run --parallel build",
         "serve": "serve ./dist/microfe-angular-example -p 4200"
     },
+    "config": {
+        "commitizen": {
+            "path": "./microfe-angular-example/node_modules/cz-lerna-changelog"
+        }
+    },
     "devDependencies": {
+        "commitizen": "^4.2.3",
+        "cz-lerna-changelog": "^2.0.3",
         "lerna": "^3.22.1",
         "serve": "^11.3.2"
     }
