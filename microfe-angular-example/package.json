@@ -21,7 +21,8 @@
         "dev:profile": "lerna run  dev --scope mfe-app-profile --stream",
         "build": "lerna run --parallel build",
         "serve": "serve ./dist/microfe-angular-example -p 4200",
-        "publish": "lerna publish"
+        "publish": "lerna publish",
+        "version": "lerna version"
     },
     "config": {
         "commitizen": {
