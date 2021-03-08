@@ -3,5 +3,13 @@
     "packages/*"
   ],
   "npmClient": "yarn",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "command": {
+    "version": {
+      "conventionalCommits": true
+    }
+  },
+  "ignoreChanges": [
+    "**/*.md"
+  ]
 }
