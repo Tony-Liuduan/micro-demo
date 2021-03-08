@@ -2,15 +2,23 @@
     "name": "micro-demo",
     "version": "1.0.0",
     "description": "",
+    "private": true,
     "main": "index.js",
+    "workspaces": [
+        "packages/*"
+    ],
     "scripts": {
         "client:init": "lerna init",
-        "dev": "lerna run --parallel start",
+        "dev": "export LOCAL_DEBUG=true && lerna run --parallel start",
         "build": "lerna run --parallel build",
         "serve": "lerna run --parallel serve",
         "prepare": "husky install",
         "version": "lerna version",
-        "c": "git-cz"
+        "c": "git-cz",
+        "i": "lerna bootstrap",
+        "u": "lerna clean",
+        "p": "npm run b && lerna publish",
+        "b": "lerna exec -- babel src -d dist --config-file ../../babel.config.js"
     },
     "repository": {
         "type": "git",
@@ -30,12 +38,26 @@
             "path": "./node_modules/cz-lerna-changelog"
         }
     },
+    "lint-staged": {
+        "*.js": [
+            "standard --fix",
+            "git add"
+        ]
+    },
     "devDependencies": {
+        "@babel/cli": "^7.13.0",
+        "@babel/core": "^7.13.8",
+        "@babel/node": "^7.13.0",
+        "@babel/preset-env": "^7.13.9",
         "@commitlint/cli": "^12.0.1",
         "@commitlint/config-conventional": "^12.0.1",
+        "babel-preset-minify": "^0.5.1",
         "commitizen": "^4.2.3",
+        "cross-env": "^7.0.3",
         "cz-lerna-changelog": "^2.0.3",
         "husky": "^4.3.8",
-        "lerna": "^3.22.1"
+        "lerna": "^3.22.1",
+        "lint-staged": "^10.5.4",
+        "standard": "^16.0.3"
     }
 }
