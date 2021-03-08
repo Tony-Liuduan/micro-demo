@@ -9,6 +9,7 @@
         "build": "lerna run --parallel build",
         "serve": "lerna run --parallel serve",
         "prepare": "husky install",
+        "version": "lerna version",
         "c": "git-cz"
     },
     "repository": {
