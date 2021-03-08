@@ -29,11 +29,6 @@
             "path": "./node_modules/cz-lerna-changelog"
         }
     },
-    "husky": {
-        "hooks": {
-            "commit-msg": "npx commitlint"
-        }
-    },
     "devDependencies": {
         "@commitlint/cli": "^12.0.1",
         "@commitlint/config-conventional": "^12.0.1",
