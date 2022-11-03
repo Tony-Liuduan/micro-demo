@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "client:init": "lerna init",
-        "dev": "lerna run --parallel start",
+        "start": "lerna run --parallel start",
+        "dev": "lerna run --parallel dev",
         "build": "lerna run --parallel build",
         "serve": "lerna run --parallel serve",
         "prepare": "husky install",
