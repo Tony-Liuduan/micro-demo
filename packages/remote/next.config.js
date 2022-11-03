@@ -24,7 +24,7 @@ const nextConfig = {
 					},
 				},
         extraOptions: {
-          skipSharingNextInternals: true,
+          skipSharingNextInternals: false,
         },
 			})
 		);
