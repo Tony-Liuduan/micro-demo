@@ -22,7 +22,10 @@ const nextConfig = {
 						requiredVersion: false,
 						singleton: true,
 					},
-				}
+				},
+        extraOptions: {
+          skipSharingNextInternals: true,
+        },
 			})
 		);
 		return config;
