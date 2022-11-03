@@ -4,7 +4,7 @@ const deps = require('./package.json').dependencies;
 module.exports = {
 	mode: 'development',
 	output: {
-		publicPath: '/',
+		publicPath: 'http://localhost:4000/', // 当需要 exposes 模块时，需要设置 publicPath 为完整路径，否则会读 host 应用的 origin
 	},
 	devServer: {
 		port: 4000,
@@ -26,15 +26,16 @@ module.exports = {
 	},
 	plugins: [
 		new ModuleFederationPlugin({
-			name: 'host',
+			name: 'reactRemote',
 			filename: 'remoteEntry.js',
 			remotes: {
 				remote: 'remote@http://localhost:4001/_next/static/chunks/remoteEntry.js',
 			},
-			exposes: {},
+			exposes: {
+				'./Nav': './src/components/Nav.jsx',
+			},
 			shared: {
 				react: {
-					// Notice shared are NOT eager here.
 					requiredVersion: false,
 					singleton: true,
 				},
