@@ -4,12 +4,11 @@ const remotes = isServer => {
 	const location = isServer ? 'ssr' : 'chunks';
 	return {
 		home: `home@http://localhost:8000/_next/static/${location}/remoteEntry.js`,
-		shop: `shop@http://localhost:8001/_next/static/${location}/remoteEntry.js`,
 	};
 };
 
 const nextConfig = {
-	reactStrictMode: true,
+	reactStrictMode: false,
 	swcMinify: true,
 	webpack(config, options) {
 		config.plugins.push(
@@ -20,7 +19,6 @@ const nextConfig = {
 				exposes: {
 					'./shop': './async-pages/shop.js',
 					'./title': './components/exposedTitle.js',
-					'./pages-map': './pages-map.js',
 				},
 				shared: {},
 			})

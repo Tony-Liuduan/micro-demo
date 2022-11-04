@@ -1,6 +1,7 @@
 import App from 'next/app';
-import dynamic from 'next/dynamic';
-const Nav = dynamic(() => import('home/nav'));
+// import dynamic from 'next/dynamic';
+import Nav from 'home/nav'; // 如果外部是 dynamic
+// const Nav = dynamic(() => import('home/nav'));
 
 function MyApp({ Component, pageProps }) {
 	return (

@@ -33,6 +33,7 @@ class MyDocument extends Document {
 			<Html>
 				<Head>
 					<meta name='robots' content='noindex' />
+					{/* 预加载 remote chunks script async */}
 					<FlushedChunks chunks={this.props.chunks} />
 				</Head>
 

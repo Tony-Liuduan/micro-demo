@@ -2,7 +2,10 @@ import React, { Suspense } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
-const RemoteTitle = dynamic(() => import('shop/title'), { suspense: true }); // TODO: suspense???
+const RemoteTitle = dynamic(
+	() => import('shop/title'),
+	{ suspense: true } // When used in combination with Suspense, components can delay hydration until the Suspense boundary is resolved.
+);
 
 const Home = ({}) => {
 	return (
@@ -13,7 +16,7 @@ const Home = ({}) => {
 			</Head>
 
 			<div className='hero'>
-				<Suspense>
+				<Suspense fallback={`Loading...`}>
 					<RemoteTitle />
 				</Suspense>
 				<h1 className='title'>

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 const ExportredTitle = () => {
-  console.log('---------loading remote component---------');
   useEffect(() => {
     console.log('HOOKS WORKS');
   }, []);
