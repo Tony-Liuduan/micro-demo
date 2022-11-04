@@ -6,7 +6,7 @@ const nextConfig = {
 	webpack(config, _options) {
 		config.plugins.push(
 			new NextFederationPlugin({
-				name: 'remote',
+				name: 'nextHost',
 				filename: 'static/chunks/remoteEntry.js',
 				remotes: {
 					reactRemote: 'reactRemote@http://localhost:4000/remoteEntry.js',

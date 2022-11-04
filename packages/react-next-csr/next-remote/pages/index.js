@@ -3,11 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import dynamic from 'next/dynamic';
 
-const ReactHostComponent = dynamic(() => import('reactRemote/Nav'), {
-	ssr: false,
-});
-
-const NextjsRemoteComponent = dynamic(() => import('nextRemote/nextjs-remote-component'), {
+const ReactRemoteComponent = dynamic(() => import('reactRemote/Nav'), {
 	ssr: false,
 });
 
@@ -28,8 +24,7 @@ export default function Home() {
 				<p className={styles.description}>
 					Get started by editing <code className={styles.code}>pages/index.js</code>
 				</p>
-				<ReactHostComponent />
-				<NextjsRemoteComponent />
+				<ReactRemoteComponent />
 				<div className={styles.grid}>
 					<a href='https://nextjs.org/docs' className={styles.card}>
 						<h2>Documentation &rarr;</h2>
