@@ -30,6 +30,7 @@ module.exports = {
 			filename: 'remoteEntry.js',
 			remotes: {
 				remote: 'remote@http://localhost:4001/_next/static/chunks/remoteEntry.js',
+				nextRemote: 'nextRemote@http://localhost:4002/_next/static/chunks/remoteEntry.js',
 			},
 			exposes: {
 				'./Nav': './src/components/Nav.jsx',
