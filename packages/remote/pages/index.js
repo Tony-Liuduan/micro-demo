@@ -7,6 +7,10 @@ const ReactHostComponent = dynamic(() => import('reactRemote/Nav'), {
 	ssr: false,
 });
 
+const NextjsRemoteComponent = dynamic(() => import('nextRemote/nextjs-remote-component'), {
+	ssr: false,
+});
+
 export default function Home() {
 	return (
 		<div className={styles.container}>
@@ -25,6 +29,7 @@ export default function Home() {
 					Get started by editing <code className={styles.code}>pages/index.js</code>
 				</p>
 				<ReactHostComponent />
+				<NextjsRemoteComponent />
 				<div className={styles.grid}>
 					<a href='https://nextjs.org/docs' className={styles.card}>
 						<h2>Documentation &rarr;</h2>

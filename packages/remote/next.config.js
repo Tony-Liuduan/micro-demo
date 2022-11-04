@@ -10,6 +10,7 @@ const nextConfig = {
 				filename: 'static/chunks/remoteEntry.js',
 				remotes: {
 					reactRemote: 'reactRemote@http://localhost:4000/remoteEntry.js',
+					nextRemote: 'nextRemote@http://localhost:4002/_next/static/chunks/remoteEntry.js',
 				},
 				exposes: {
 					'./nextjs-remote-component': './components/nextjs-remote-component.js',
