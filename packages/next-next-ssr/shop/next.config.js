@@ -19,6 +19,7 @@ const nextConfig = {
 				exposes: {
 					'./shop': './async-pages/shop.js',
 					'./title': './components/exposedTitle.js',
+					'./pages-map': './pages-map.js',
 				},
 				shared: {},
 			})
