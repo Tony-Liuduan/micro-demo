@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack').container.ModuleFederationPlugin;
+const ExternalTemplateRemotesPlugin = require('external-remotes-plugin');
 const deps = require('./package.json').dependencies;
 module.exports = {
 	mode: 'development',
@@ -25,12 +26,13 @@ module.exports = {
 		extensions: ['.jsx', '.js', '.json'],
 	},
 	plugins: [
+		new ExternalTemplateRemotesPlugin(),
 		new ModuleFederationPlugin({
 			name: 'reactRemote',
 			filename: 'remoteEntry.js',
 			remotes: {
-				nextHost: 'nextHost@http://localhost:4001/_next/static/chunks/remoteEntry.js',
-				nextRemote: 'nextRemote@http://localhost:4002/_next/static/chunks/remoteEntry.js',
+				nextHost: 'nextHost@[window.nextHostUrlGlobalVariable]/remoteEntry.js',
+				nextRemote: 'nextRemote@[window.nextRemotetUrlGlobalVariable]/remoteEntry.js',
 			},
 			exposes: {
 				'./Nav': './src/components/Nav.jsx',
