@@ -31,8 +31,8 @@ module.exports = {
 			name: 'reactRemote',
 			filename: 'remoteEntry.js',
 			remotes: {
-				nextHost: 'nextHost@[window.nextHostUrlGlobalVariable]/remoteEntry.js',
-				nextRemote: 'nextRemote@[window.nextRemotetUrlGlobalVariable]/remoteEntry.js',
+				nextHost: 'nextHost@[window.nextHostUrlGlobalVariable]/remoteEntry.js?t=' + +new Date(),
+				nextRemote: 'nextRemote@[window.nextRemotetUrlGlobalVariable]/remoteEntry.js?t=' + +new Date(),
 			},
 			exposes: {
 				'./Nav': './src/components/Nav.jsx',
