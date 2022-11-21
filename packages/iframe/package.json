@@ -1,0 +1,10 @@
+{
+  "name": "iframe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:main": "npx http-server -p 8000",
+    "dev:micro": "npx http-server -p 8001"
+  }
+}
