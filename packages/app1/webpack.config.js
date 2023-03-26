@@ -12,6 +12,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
+    devtool: false,
     devServer: {
         port: 3001,
     },
@@ -68,22 +69,27 @@ module.exports = {
         new ModuleFederationPlugin({
             name: "app1",
             filename: 'remoteEntry.js',
+            // remoteType: 'var',
+			// remotes: {
+			// 	app2: 'app2',
+			// },
             remotes: {
                 app2: 'app2@http://localhost:3002/remoteEntry.js',
+                app3: 'app3@http://localhost:3003/remoteEntry.js',
             },
             exposes: {
 
             },
-            // shared: {
-            //     react: {
-            //         requiredVersion: false,
-            //         singleton: true,
-            //     },
-            //     'react-dom': {
-            //         requiredVersion: false,
-            //         singleton: true,
-            //     },
-            // },
+            shared: {
+                react: {
+                    requiredVersion: false,
+                    singleton: true,
+                },
+                'react-dom': {
+                    requiredVersion: false,
+                    singleton: true,
+                },
+            },
         }),
         // new ModuleFederationPlugin({
         //     name: 'app1',
