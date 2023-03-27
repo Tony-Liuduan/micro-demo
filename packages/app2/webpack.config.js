@@ -61,9 +61,7 @@ module.exports = {
 			name: 'app2',
 			// library: { type: 'var', name: 'app2' },
 			filename: 'remoteEntry.js',
-			exposes: {
-				'./Button': './src/Button.js',
-			},
+			exposes: {'./Button': './src/Button.js'},
 			shared: {
                 react: {
                     requiredVersion: false,

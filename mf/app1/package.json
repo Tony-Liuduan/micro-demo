@@ -9,7 +9,7 @@
 	"scripts": {
 		"dev": "webpack-dev-server",
 		"build": "webpack",
-		"serve": "cd dist && npx http-server -p 3001"
+		"serve": "npx http-server -p 3001"
 	},
 	"dependencies": {
 		"react": "18.0.0",
