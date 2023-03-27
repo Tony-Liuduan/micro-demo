@@ -24,7 +24,8 @@
 				 * @Date 2020-07-02 12:27:42
 				 * @LastEditTime 2020-07-02 16:07:09
 				 */
-
+				console.log('app2 __webpack_require__.m', __webpack_require__.m);
+				console.log('app2 __webpack_require__.c', __webpack_require__.c);
 				const Button = () =>
 					/*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.createElement('button', null, ' App2 Button');
 				/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = Button;
