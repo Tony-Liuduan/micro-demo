@@ -7,7 +7,12 @@
 					__webpack_require__.e('common-webpack_sharing_consume_default_react_react'),
 					__webpack_require__.e('src_bootstrap_js'),
 				]
-			).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ './src/bootstrap.js'));
+			)
+				.then(res => {
+					console.log('@@@@@@@@@@@@@@@@@@@@@@@@ app1 2 个 promis resolve');
+					return res;
+				})
+				.then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ './src/bootstrap.js'));
 		},
 
 		'webpack/container/reference/app2': (module, __unused_webpack_exports, __webpack_require__) => {
